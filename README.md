@@ -1,8 +1,6 @@
-
 # 土佐ビジネスアカデミー Nextremer API Server
 
 位置情報アプリのサービス用Web APIを提供するための、Ruby on Rails製のアプリケーション。
-
 
 
 # 開発手順 : Get Started
@@ -24,8 +22,8 @@ rbenv install 2.3.0
 
 ```bash
 # Clone
-git clone git@github.com:Nextremer/piculetly-api-server.git
-cd piculetly-api-server
+git clone https://github.com/YosukeSasaoka/tba-app-api.git
+cd tba-app-api
 # 依存ライブラリインストール
 # もしかしたら bundle update を実行しろと言われるかもしれません
 bundle install --path vendor/bundle 
