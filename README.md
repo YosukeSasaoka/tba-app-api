@@ -29,17 +29,8 @@ cd piculetly-api-server
 # 依存ライブラリインストール
 # もしかしたら bundle update を実行しろと言われるかもしれません
 bundle install --path vendor/bundle 
-# DBマイグレーション
-~~bundle exec rake db:migrate~~
-~~bundle exec rake db:seed~~
 # サーバ起動
 bundle exec rails s -b 0.0.0.0
-```
-
-サーバが起動したら、APIドキュメントにアクセスしましょう.
-
-```
-~~http://localhost:3000/docs~~
 ```
 
 # 開発ルール
