@@ -14,17 +14,15 @@
 Ruby On Railsの環境構築
 * ↓これを参考に進めてください（Ruby のインストールとDevKitのインストール）
 * http://qiita.com/MToda/items/89147bd3712129bebf75
-
-** 上記を進めてエラーになった箇所
-*** DevKitのインストールの「ruby dk.rb install」
-*** 参考サイト： http://snoopopo.hatenablog.com/entry/2015/06/09/161603
+    * 上記を進めてエラーになった箇所
+        * DevKitのインストールの「ruby dk.rb install」
+        * 参考サイト： http://snoopopo.hatenablog.com/entry/2015/06/09/161603
 
 bundlerをインストール
 * gem install bundler
-
-** 実行時にエラーが出た場合は下記を参考に対応
-*** 参考サイト： http://sutara79.hatenablog.com/entry/2016/10/15/205047
-*** 項目： RubyGemsを最新版にする
+    * 実行時にエラーが出た場合は下記を参考に対応
+        * 参考サイト： http://sutara79.hatenablog.com/entry/2016/10/15/205047
+        * 項目： RubyGemsを最新版にする
 
 Git をインストール
 * ↓これを参考に進めてください
