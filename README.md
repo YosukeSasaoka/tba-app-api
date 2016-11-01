@@ -10,24 +10,25 @@
 * bundler (ruby install時に自動でインストールされる)
 
 ## Windowsでのセットアップ
-### Ruby On Railsの環境構築
-↓これを参考に進めてください（Ruby のインストールとDevKitのインストール）
-http://qiita.com/MToda/items/89147bd3712129bebf75
 
-#### 上記を進めてエラーになった箇所
-DevKitのインストールの「ruby dk.rb install」
-参考サイト： http://snoopopo.hatenablog.com/entry/2015/06/09/161603
+Ruby On Railsの環境構築
+* ↓これを参考に進めてください（Ruby のインストールとDevKitのインストール）
+* http://qiita.com/MToda/items/89147bd3712129bebf75
 
-### bundlerをインストール
-gem install bundler
+** 上記を進めてエラーになった箇所
+*** DevKitのインストールの「ruby dk.rb install」
+*** 参考サイト： http://snoopopo.hatenablog.com/entry/2015/06/09/161603
 
-#### 実行時にエラーが出た場合は下記を参考に対応
-参考サイト： http://sutara79.hatenablog.com/entry/2016/10/15/205047
-項目： RubyGemsを最新版にする
+bundlerをインストール
+* gem install bundler
 
-### Git をインストール
-↓これを参考に進めてください
-https://utano.jp/entry/2016/07/git-for-windows-install/
+** 実行時にエラーが出た場合は下記を参考に対応
+*** 参考サイト： http://sutara79.hatenablog.com/entry/2016/10/15/205047
+*** 項目： RubyGemsを最新版にする
+
+Git をインストール
+* ↓これを参考に進めてください
+* https://utano.jp/entry/2016/07/git-for-windows-install/
 
 ### ここから先は先程インストールしたGit（Git Bashを選択）で実行
 ```bash
@@ -46,7 +47,7 @@ Yay! You’re on Rails!
 ```
 
 ## Macでのセットアップ
-### rbenvを使っている場合
+rbenvを使っている場合
 
 下記のコマンド等でインストールしておくと良いと思います。
 
