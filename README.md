@@ -31,7 +31,7 @@ Git をインストール
 ### ここから先は先程インストールしたGit（Git Bashを選択）で実行
 ```bash
 # Clone
-git clone https://github.com/YosukeSasaoka/tba-app-api.git
+git clone git@github.com:YosukeSasaoka/tba-app-api.git
 cd tba-app-api
 # 依存ライブラリインストール
 # もしかしたら bundle update を実行しろと言われるかもしれません
