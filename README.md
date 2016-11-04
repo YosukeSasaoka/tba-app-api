@@ -9,42 +9,7 @@
 * ruby 2.2系 (2.2.4 or 2.2.5)
 * bundler (ruby install時に自動でインストールされる)
 
-## Windowsでのセットアップ
-
-Ruby On Railsの環境構築
-* ↓これを参考に進めてください（Ruby のインストールとDevKitのインストール）
-* http://qiita.com/MToda/items/89147bd3712129bebf75
-    * 上記を進めてエラーになった箇所
-        * DevKitのインストールの「ruby dk.rb install」
-        * 参考サイト： http://snoopopo.hatenablog.com/entry/2015/06/09/161603
-
-bundlerをインストール
-* gem install bundler
-    * 実行時にエラーが出た場合は下記を参考に対応
-        * 参考サイト： http://sutara79.hatenablog.com/entry/2016/10/15/205047
-        * 項目： RubyGemsを最新版にする
-
-Git をインストール
-* ↓これを参考に進めてください
-* https://utano.jp/entry/2016/07/git-for-windows-install/
-
-### ここから先は先程インストールしたGit（Git Bashを選択）で実行
-```bash
-# Clone
-git clone git@github.com:YosukeSasaoka/tba-app-api.git
-cd tba-app-api
-# 依存ライブラリインストール
-# もしかしたら bundle update を実行しろと言われるかもしれません
-bundle install --path vendor/bundle 
-# サーバ起動
-bundle exec rails s
-# ブラウザでアクセス
-http://localhost:3000/
-# ↓が表示されれば完了
-Yay! You’re on Rails!
-```
-
-## Macでのセットアップ
+## セットアップ
 rbenvを使っている場合
 
 下記のコマンド等でインストールしておくと良いと思います。
@@ -55,7 +20,7 @@ rbenv install 2.2.4
 
 ```bash
 # Clone
-git clone https://github.com/YosukeSasaoka/tba-app-api.git
+git clone git@github.com:YosukeSasaoka/tba-app-api.git
 cd tba-app-api
 # bundleをインストール
 gem install bundler
