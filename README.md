@@ -6,7 +6,7 @@
 
 ## Requirements
 
-* ruby 2.2系 (2.2.4 or 2.2.5)
+* ruby 2.2系 (2.2.4)
 * bundler (ruby install時に自動でインストールされる)
 
 ## セットアップ
@@ -27,10 +27,10 @@ gem install bundler
 # 依存ライブラリインストール
 # もしかしたら bundle update を実行しろと言われるかもしれません
 bundle install --path vendor/bundle
-# サーバ起動
-bundle exec rails s
+# サーバ起動（ポートは3002
+bundle exec rails s -p 3002
 # ブラウザでアクセス
-http://localhost:3000/
+http://localhost:3002/
 # ↓が表示されれば完了
 Yay! You’re on Rails!
 ```
