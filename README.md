@@ -26,7 +26,7 @@ cd tba-app-api
 gem install bundler
 # 依存ライブラリインストール
 # もしかしたら bundle update を実行しろと言われるかもしれません
-bundle install --path vendor/bundle
+bundle install --without development test --path vendor/bundle
 # サーバ起動（ポートは3002
 bundle exec rails s -p 3002
 # ブラウザでアクセス
