@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126093426) do
+ActiveRecord::Schema.define(version: 20161126094952) do
 
   create_table "users", force: :cascade do |t|
     t.string   "uuid",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["uuid"], name: "index_users_on_uuid", unique: true
   end
 
 end
