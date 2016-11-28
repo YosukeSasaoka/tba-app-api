@@ -5,6 +5,19 @@ module API
       # http://localhost:3000/api/v1/users/
       resources :users do
 
+        # http://localhost:3000/api/v1/users/me
+        desc 'show user'
+        params do
+        end
+        get '/me' do
+          authenticate!
+
+          {
+            uuid: current_user.uuid,
+          }
+        end
+
+
         # http://localhost:3000/api/v1/users
         desc 'create user'
         params do
