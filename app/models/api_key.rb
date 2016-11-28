@@ -3,6 +3,7 @@ require('securerandom')
 class ApiKey < ApplicationRecord
   belongs_to :user
   validates :access_token, presence: true
+  scope :enabled, -> {where(status: ApiKey::STATUS[:enabled])}
 
   STATUS = {
     disabled: 0,
@@ -23,6 +24,14 @@ class ApiKey < ApplicationRecord
       api_key.status = ApiKey::STATUS[:enabled]
       # これを忘れて1時間苦しんだ。。。
       api_key
+    end
+
+    # Tokenを取得->Userモデルを返す
+    def authenticate(token)
+      token = ApiKey.joins(:user).includes(:user).enabled.find_by(access_token: token)
+
+      return nil unless token
+      token.user
     end
   end
 

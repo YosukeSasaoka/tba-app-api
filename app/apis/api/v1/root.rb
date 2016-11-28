@@ -7,6 +7,14 @@ module API
       format :json
 
       helpers do
+        def current_user
+          @current_user = ApiKey.authenticate(params[:token])
+          @current_user
+        end
+
+        def authenticate!
+          error!('401 Unauthorized : invalid token', 401) unless current_user
+        end
       end
 
       mount API::V1::UserApi
