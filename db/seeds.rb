@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+def createTestUser!
+
+  user = User.new
+  user.uuid = "12345"
+  api_key = ApiKey.generate
+  api_key.access_token = "test_token"
+  user.api_keys << api_key
+  user.save!
+end
+
+def main
+
+  createTestUser!()
+
+end
+
+main()
