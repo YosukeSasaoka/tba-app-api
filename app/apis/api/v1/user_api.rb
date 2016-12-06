@@ -17,6 +17,23 @@ module API
           }
         end
 
+        # http://localhost:3000/api/v1/users/me/name
+        desc 'update user'
+        params do
+          requires :name, type: String, desc: 'test for put'
+        end
+        put '/me/name' do
+          authenticate!
+
+          # ReadOnlyRecordで怒られるから他でsave!
+          # joinsしてるからreadonly(false)で治る
+          @current_user.update_user_name!(params[:name])
+
+          {
+            name: @current_user.name
+          }
+
+        end
 
         # http://localhost:3000/api/v1/users
         desc 'create user'
