@@ -1,3 +1,4 @@
+# coding: utf-8
 
 module API
   module V1
@@ -25,14 +26,8 @@ module API
         put '/me/name' do
           authenticate!
 
-          # ReadOnlyRecordで怒られるから他でsave!
-          # joinsしてるからreadonly(false)で治る
-          @current_user.update_user_name!(params[:name])
-
-          {
-            name: @current_user.name
-          }
-
+          @current_user.update_name!(params[:name])
+          { message: 'successfully user name updated' }
         end
 
         # http://localhost:3000/api/v1/users
