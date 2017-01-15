@@ -28,7 +28,7 @@ class ApiKey < ApplicationRecord
 
     # Tokenを取得->Userモデルを返す
     def authenticate(token)
-      token = ApiKey.joins(:user).includes(:user).enabled.find_by(access_token: token)
+      token = ApiKey.joins(:user).enabled.find_by(access_token: token)
       return nil unless token
       token.user
     end
