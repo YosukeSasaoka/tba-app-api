@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126100555) do
+ActiveRecord::Schema.define(version: 20161206164238) do
 
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token",             null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20161126100555) do
     t.string   "uuid",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
     t.index ["uuid"], name: "index_users_on_uuid", unique: true
   end
 

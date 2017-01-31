@@ -1,3 +1,4 @@
+# coding: utf-8
 
 module API
   module V1
@@ -17,6 +18,17 @@ module API
           }
         end
 
+        # http://localhost:3000/api/v1/users/me/name
+        desc 'update user'
+        params do
+          requires :name, type: String, desc: 'test for put'
+        end
+        put '/me/name' do
+          authenticate!
+
+          @current_user.update_name!(params[:name])
+          { message: 'successfully user name updated' }
+        end
 
         # http://localhost:3000/api/v1/users
         desc 'create user'
